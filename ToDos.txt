@@ -1,3 +1,5 @@
+Describe data in chapter (until next session 11.10.): Categorization, token number, languages
+
 Test LLMs to make sure if it works at all:
 • Google Gemini
 • GPT-4
