@@ -1,18 +1,18 @@
 Describe data in chapter (until next session 11.10.): Categorization, token number, languages
 
+Determine data amount: at least 400 words per text, more if possible (Paper by Volk et al. had 1240 words in Latin -> we have 3 documents, ergo 400)
+
+Find paragraphs:
+• Bible: Neutral text, Psalms, Poetry -> try and find a good mix (Andrea)
+• De legibus (Cicero): Neutral (Stefano)
+• Historia (Monmouth): Neutral (Stefano)
+
 Test LLMs to make sure if it works at all:
 • Google Gemini
 • GPT-4
 • Google Translator
 • Yandex Translate
 • LLaMa
-
-Determine data amount: at least 400 words per text, more if possible (Paper by Volk et al. had 1240 words in Latin -> we have 3 documents, ergo 400)
-
-Find paragraphs:
-• Bible: Neutral text, Psalms, Poetry -> try and find a good mix
-• De legibus (Cicero): Neutral
-• Historia (Monmouth): Neutral
 
 Find more English translations of the Bible
 
