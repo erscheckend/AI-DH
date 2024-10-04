@@ -1,23 +1,34 @@
 Test LLMs to make sure if it works at all:
-	• Google Gemini
-	• GPT-4
-	• Google Translator
-	• Yandex Translate
-	• LLaMa
+• Google Gemini
+• GPT-4
+• Google Translator
+• Yandex Translate
+• LLaMa
 
-Find text extracts:
-	• Bible: Neutral text, Psalms, Poetry
-	• De legibus (Cicero): Neutral
-	• Historia (Monmouth): Neutral
+Determine data amount: 400 words per text (Paper by Volk et al. had 1240 words in Latin -> we have 3 documents, ergo 400)
+
+Find paragraphs:
+• Bible: Neutral text, Psalms, Poetry
+• De legibus (Cicero): Neutral
+• Historia (Monmouth): Neutral
 
 Find more English translations of the Bible
+
+Enter original + gold standard translation into Excel
 
 Write python script to execute the translation scores
 	• BLEU
 	• ROUGE
 	• chrF
-	• METEOR?
+	• METEOR
+Test the script with known languages
 
-Run each text extract through each MT
-Enter original + gold standard translation + MT result into a sheet
-Score MT results compared to gold standard
+Run each paragraph through each MT
+
+Enter MT result into Excel
+
+Score translations
+
+Identify "bad" results
+
+Run "bad" paragraphs through MT 1 sentence at a time and see if it changes
