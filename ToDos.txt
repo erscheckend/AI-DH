@@ -6,10 +6,7 @@ Test LLMs to make sure if it works at all:
 	• LLaMa
 
 Find text extracts:
-	• Bible
-  	• Neutral text
-  	• Psalms
-  	• Poetry
+	• Bible: Neutral text, Psalms, Poetry
 	• De legibus (Cicero): Neutral
 	• Historia (Monmouth): Neutral
 
