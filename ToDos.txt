@@ -1,0 +1,26 @@
+Test LLMs to make sure if it works at all:
+	• Google Gemini
+	• GPT-4
+	• Google Translator
+	• Yandex Translate
+	• LLaMa
+
+Find text extracts:
+	• Bible
+  	• Neutral text
+  	• Psalms
+  	• Poetry
+	• De legibus (Cicero): Neutral
+	• Historia (Monmouth): Neutral
+
+Find more English translations of the Bible
+
+Write python script to execute the translation scores
+	• BLEU
+	• ROUGE
+	• chrF
+	• METEOR?
+
+Run each text extract through each MT
+Enter original + gold standard translation + MT result into a sheet
+Score MT results compared to gold standard
