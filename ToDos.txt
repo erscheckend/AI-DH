@@ -1,7 +1,7 @@
 Bis 11.10.:
 Determine data amount: at least 400 words per text, more if possible (Paper by Volk et al. had 1240 words in Latin)
 Find paragraphs:
-• Bible: Neutral text, Psalms, Poetry -> try and find a good mix (Andrea)
+• Bible: Neutral text, Psalms, Poetry -> try and find a good mix (Andrea) ***Done, around 800-900 words***
 • De legibus (Cicero): Neutral (Stefano)
 • Historia (Monmouth): Neutral (Stefano)
 
