@@ -35,6 +35,13 @@ def process_csv(file_path):
         reader = csv.reader(csvfile)
         headers = next(reader)
         
+        # Initialize lists to store the scores
+        bleu_scores = []
+        rouge_scores = []
+        chrf_scores = []
+        meteor_scores = []
+
+        # Loop through each row to calculate and collect scores
         for row_num, row in enumerate(reader, start=2):
             reference = row[3]
             hypotheses = {
@@ -42,33 +49,53 @@ def process_csv(file_path):
                 "Column F": row[5],
             }
             
-            # Print BLEU scores
-            print("BLEU scores")
+            # Collect BLEU scores
+            bleu_row = {}
             for label, hypothesis in hypotheses.items():
-                score = calculate_bleu(reference, hypothesis)
-                print(f"Row {row_num} - {label} score: {score:.2f}")
-            print()
+                bleu_row[label] = calculate_bleu(reference, hypothesis)
+            bleu_scores.append(bleu_row)
             
-            # Print ROUGE-L scores
-            print("ROUGE scores")
+            # Collect ROUGE-L scores
+            rouge_row = {}
             for label, hypothesis in hypotheses.items():
-                score = calculate_rouge_l(reference, hypothesis)
-                print(f"Row {row_num} - {label} score: {score:.2f}")
-            print()
+                rouge_row[label] = calculate_rouge_l(reference, hypothesis)
+            rouge_scores.append(rouge_row)
             
-            # Print chrF scores
-            print("chrF scores")
+            # Collect chrF scores
+            chrf_row = {}
             for label, hypothesis in hypotheses.items():
-                score = calculate_chrf(reference, hypothesis)
-                print(f"Row {row_num} - {label} score: {score:.2f}")
-            print()
+                chrf_row[label] = calculate_chrf(reference, hypothesis)
+            chrf_scores.append(chrf_row)
             
-            # Print METEOR scores
-            print("METEOR scores")
+            # Collect METEOR scores
+            meteor_row = {}
             for label, hypothesis in hypotheses.items():
-                score = calculate_meteor(reference, hypothesis)
-                print(f"Row {row_num} - {label} score: {score:.2f}")
-            print("\n" + "-"*50 + "\n")
+                meteor_row[label] = calculate_meteor(reference, hypothesis)
+            meteor_scores.append(meteor_row)
+
+        # Print all BLEU scores
+        print("BLEU Scores:")
+        for i, score in enumerate(bleu_scores):
+            print(f"Row {i+2} - Gemini: {score['Column E']:.2f}, Yandex: {score['Column F']:.2f}")
+        print("\n" + "-"*50 + "\n")
+
+        # Print all ROUGE scores
+        print("ROUGE Scores:")
+        for i, score in enumerate(rouge_scores):
+            print(f"Row {i+2} - Gemini: {score['Column E']:.2f}, Yandex: {score['Column F']:.2f}")
+        print("\n" + "-"*50 + "\n")
+
+        # Print all chrF scores
+        print("chrF Scores:")
+        for i, score in enumerate(chrf_scores):
+            print(f"Row {i+2} - Gemini: {score['Column E']:.2f}, Yandex: {score['Column F']:.2f}")
+        print("\n" + "-"*50 + "\n")
+
+        # Print all METEOR scores
+        print("METEOR Scores:")
+        for i, score in enumerate(meteor_scores):
+            print(f"Row {i+2} - Gemini: {score['Column E']:.2f}, Yandex: {score['Column F']:.2f}")
+        print("\n" + "-"*50 + "\n")
 
 # Main entry point
 def main():
